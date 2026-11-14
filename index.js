@@ -26,7 +26,7 @@ app.use(express.json());
 // 🔒 In production:
 app.use(
   cors({
-    origin: ["https://yourfrontend.com"],
+    origin: ["https://mentorship-task-api.onrender.com/"],
   }),
 );
 
