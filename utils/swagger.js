@@ -1,4 +1,5 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import dotenv from "dotenv";
 
 const options = {
   definition: {
@@ -10,7 +11,10 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:4000",
+        url:
+          process.env.NODE_ENV == "development"
+            ? "http://localhost:4000"
+            : "https://mentorship-task-api.onrender.com",
       },
     ],
     components: {
